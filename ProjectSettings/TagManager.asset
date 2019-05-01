@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FlapButton
+  - Background
+  - Ground
+  - Pipe
+  - PipeHolder
   layers:
   - Default
   - TransparentFX
@@ -14,13 +19,13 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BGCollector
+  - Background
+  - Ground
+  - Player
+  - Pipe
+  - PipeCollector
+  - PipeHolder
   - 
   - 
   - 
@@ -40,4 +45,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3430942615
+    locked: 0
+  - name: Ground
+    uniqueID: 2467541305
+    locked: 0
+  - name: Pipe
+    uniqueID: 4287165223
+    locked: 0
+  - name: Bird
+    uniqueID: 998948391
+    locked: 0
+  - name: Canvas
+    uniqueID: 2892894829
     locked: 0
