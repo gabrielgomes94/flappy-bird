@@ -47,11 +47,29 @@ public class BirdScript : MonoBehaviour
                 anim.SetTrigger("Flap");
             }
         }
-        
+
+        if(myRigidBody.velocity.y >= 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        } else {
+            float angle = 0;
+            angle = Mathf.Lerp(0, -90, -myRigidBody.velocity.y / 7);
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 
     public void FlapTheBird()
     {
         didFlap = true;
+    }
+
+    public float GetPositionX()
+    {
+        return transform.position.x;
+    }
+
+    void SetCamerasX()
+    {
+        CameraScript.offsetX = (Camera.main.transform.position.x - transform.position.x) - 1f;
     }
 }
