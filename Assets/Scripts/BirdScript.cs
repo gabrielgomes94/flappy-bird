@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BirdScript : MonoBehaviour
 {
@@ -18,13 +19,17 @@ public class BirdScript : MonoBehaviour
     private bool didFlap;
 
     public bool isAlive;
+
+    private Button flapButton;
     void Awake()
     {
         if (instance == null){
             instance = this;
         }
         isAlive = true;
-    }
+        flapButton = GameObject.FindGameObjectWithTag("FlapButton").GetComponent<Button>();
+        flapButton.onClick.AddListener(() => FlapTheBird());
+    }   
     // Start is called before the first frame update
     void Start()
     {
